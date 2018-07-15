@@ -12,7 +12,6 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 from html_crawl import crawl_web
 from datetime import date 
-from file_writer import pd_to_csv
 
 # get data
 tags = crawl_web()
