@@ -3,8 +3,13 @@
 import pandas as pd
 import plotly.plotly as py
 import plotly.graph_objs as go
+<<<<<<< HEAD
 from data_collection.html_crawl import extract_price_tags
 from datetime import date
+=======
+from html_crawl import crawl_web
+from datetime import date 
+>>>>>>> 7b3725acfbcc6056b2d5ef7d2afa08deb9ece7cb
 
 # get data
 tags = extract_price_tags()
