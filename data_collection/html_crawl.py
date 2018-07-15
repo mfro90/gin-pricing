@@ -1,17 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri July 6 13:42:37 2018
-
-@author: mfr
-"""
-# import dependencies 
 from urllib.error import HTTPError
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-### extract price tags 
-def crawl_web():
+def extract_price_tags():
     tags = []
     for x in range(1, 100):
         # specify the url
@@ -32,11 +25,10 @@ def crawl_web():
 
     # find all priceStor elements and store in BS4 obj 
         price_tags = soup.find_all("a", class_='priceStor')
-        price_tags_type = str(type(price_tags))
 
     # parse items in list obj
         for t in price_tags:
             tags.append(t.string)
         len_list = str(len(tags))
-    return(tags)
 
+    return tags

@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 27 21:44:37 2018
-
-@author: mfr
-"""
-# import dependencies 
-import numpy as np 
 import pandas as pd
 import plotly.plotly as py
 import plotly.graph_objs as go
-from html_crawl import crawl_web
-from datetime import date 
-from file_writer import pd_to_csv
+from data_collection.html_crawl import extract_price_tags
+from datetime import date
 
 # get data
-tags = crawl_web()
+tags = extract_price_tags()
 
 # convert to pd df obj
 df = pd.DataFrame([sub.split(' ') for sub in tags], columns=["a", "price"])
